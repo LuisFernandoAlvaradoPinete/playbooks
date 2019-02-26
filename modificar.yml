@@ -1,0 +1,11 @@
+---
+- name: Modificar Archivo de Configuracion
+  hosts: nl
+  become: true
+
+  tasks:
+    - lineinfile:
+       path: /etc/resolv.conf
+       regexp: '^ nameserver'
+       insertafter: '^#nameserver'
+       line: 'nameserver 8.4.4.4'
