@@ -1,6 +1,6 @@
 ---
 - name: Modificar Archivo de Configuracion
-  hosts: nl
+  hosts: all
   become: true
 
   tasks:
